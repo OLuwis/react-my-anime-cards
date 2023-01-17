@@ -1,7 +1,7 @@
 import React from 'react'
 
 const AnimeCover = (props) => (
-  <img src={props.imageSrc} alt="Anime-Cover" className='sm:h-full' style={{aspectRatio: "75/120"}}/>
+  <img src={props.imageSrc} alt="Anime-Cover" className='sm:h-full w-24' style={{aspectRatio: "75/106"}}/>
 )
 
 const AnimeTitle = (props) => (
