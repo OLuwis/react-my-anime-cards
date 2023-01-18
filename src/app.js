@@ -53,8 +53,8 @@ export const App = () => {
                             title={anime.title}
                             imageSrc={anime.images.webp.image_url}
                             studio={anime.studios.map(studio => studio.name).join(", ")}
-                            rating={anime.score !== null ? `${anime.score} (${anime.scored_by})` : `N/A (N/A)`}
-                            members={anime.members}
+                            rating={anime.score !== null ? `${anime.score} (${Intl.NumberFormat("en", { notation: "compact" }).format(anime.scored_by)})` : `N/A (N/A)`}
+                            members={Intl.NumberFormat("en", { notation: "compact" }).format(anime.members)}
                             synopsis={anime.synopsis}
                             malUrl={anime.url !== null ? anime.url : "#"}
                             ytUrl={anime.trailer.url !== null ? anime.trailer.url : "#"}

@@ -1,15 +1,15 @@
 import React from 'react'
 
 const AnimeCover = (props) => (
-  <img src={props.imageSrc} alt="Anime-Cover" className='h-full' style={{aspectRatio: "75/106"}}/>
+  <img src={props.imageSrc} alt="Anime-Cover" className='h-full w-1/2' style={{aspectRatio: "75/106"}}/>
 )
 
 const AnimeTitle = (props) => (
-  <h1 className='w-full md:text-2xl text-xl font-semibold' id='anime-title'>{props.title}</h1>
+  <h1 className='w-full md:text-2xl text-lg font-semibold' id='anime-title'>{props.title}</h1>
 )
 
 const AnimeStudio = (props) => (
-  <h2 className='w-full md:text-xl text-lg font-base' id='anime-studio'>{props.studio}</h2>
+  <h2 className='w-full md:text-xl text-base font-base' id='anime-studio'>{props.studio}</h2>
 )
 
 const AnimeRating = (props) => (
@@ -33,7 +33,7 @@ const AnimeLinks = (props) => (
 
 export const AnimeCard = (props) => {
   return (
-    <div className='flex flex-row bg-blue-700 text-white overflow-hidden rounded-sm h-80 shadow-lg'>
+    <div className='flex flex-row bg-blue-800 text-white overflow-hidden rounded-sm h-80 shadow-lg'>
       <AnimeCover imageSrc={props.imageSrc}/>
       <div className='flex flex-col w-full p-4 overflow-auto' id='anime-details'>
         <AnimeTitle title={props.title}/>
