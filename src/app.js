@@ -62,7 +62,7 @@ export const App = () => {
                     )}
                 </AnimeSection>
                 <div className="flex flex-row flex-wrap bg-white w-fit m-auto mt-8 overflow-hidden rounded-md text-lg font-semibold shadow-sm shadow-black cursor-pointer" id="pagination">
-                    {data !== null && pagination.map(page => <span className={`py-2 px-4 hover:bg-blue-600 hover:text-white ${data.pagination.current_page === page ? "bg-blue-600 text-white" : ""}`} onClick={() => {url.includes("filter") ? setUrl(`${url}&page=${page}`) : url.includes("page") ? setUrl(url.replace(/\d/, page) ) : setUrl(`${url}?page=${page}`)}}>{page}</span>)}
+                    {data !== null && pagination.map(page => <span className={`py-2 px-4 hover:bg-blue-600 hover:text-white ${data.pagination.current_page === page ? "bg-blue-600 text-white" : ""}`} onClick={() => {url.includes("filter") ? setUrl(`${url}&page=${page}`) : url.includes("page") ? setUrl(url.replace(/\d+/, page) ) : setUrl(`${url}?page=${page}`)}}>{page}</span>)}
                 </div>
             </main>}
         </div>
